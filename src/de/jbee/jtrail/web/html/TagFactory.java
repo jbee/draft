@@ -2,7 +2,6 @@ package de.jbee.jtrail.web.html;
 
 import java.util.List;
 
-
 import de.jbee.jtrail.io.Data;
 import de.jbee.jtrail.io.Out;
 import de.jbee.jtrail.io.Unique;
@@ -47,8 +46,8 @@ public interface TagFactory<N extends Enum<N>> {
 	public InputTag inputHidden( N name, Data<String> initalValue, Out<String> submitValue );
 
 	//TODO lieber "select" und type-enum: list, radio, combo-box
-	public <E> InputTag inputRadio( N name, Data<List<Unique<E>>> options, Data<Unique<E>> initalValue,
-		Out<Unique<E>> submitValue );
+	public <E> InputTag inputRadio( N name, Data<List<Unique<E>>> options,
+			Data<Unique<E>> initalValue, Out<Unique<E>> submitValue );
 
 	public InputTag inputReset( Data<JsCall> script );
 
@@ -58,18 +57,18 @@ public interface TagFactory<N extends Enum<N>> {
 
 	public PlainText plainText( N name, Data<String> text );
 
-	public <E> SelectTag selectBox( N name, Data<List<Unique<E>>> options, Data<Unique<E>> initialValue,
-		Out<Unique<E>> submitValue );
+	public <E> SelectTag selectBox( N name, Data<List<Unique<E>>> options,
+			Data<Unique<E>> initialValue, Out<Unique<E>> submitValue );
 
 	/* Links */
 
-	public <E> SelectTag selectList( N name, Data<List<Unique<E>>> options, Data<List<Unique<E>>> initialValues,
-		Out<Unique<E>> submitValue );
+	public <E> SelectTag selectList( N name, Data<List<Unique<E>>> options,
+			Data<List<Unique<E>>> initialValues, Out<Unique<E>> submitValue );
 
 	/* Images */
 
-	public <E> SelectTag selectMultiple( N name, Data<List<Unique<E>>> options, Data<List<Unique<E>>> initialValues,
-		Out<List<Unique<E>>> submitValues );
+	public <E> SelectTag selectMultiple( N name, Data<List<Unique<E>>> options,
+			Data<List<Unique<E>>> initialValues, Out<List<Unique<E>>> submitValues );
 
 	/* Plain Text */
 

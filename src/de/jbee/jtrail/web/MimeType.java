@@ -2,7 +2,8 @@ package de.jbee.jtrail.web;
 
 import de.jbee.jtrail.io.Encodeable;
 
-public interface MimeType extends Encodeable {
+public interface MimeType
+		extends Encodeable {
 
 	public static enum MediaType {
 		TEXT, // = f�r Textdateien

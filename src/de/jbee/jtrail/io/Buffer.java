@@ -12,13 +12,13 @@ public final class Buffer<E extends Enum<E>> {
 		this.data = new Object[idClass.getEnumConstants().length];
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings ( "unchecked" )
 	public <T> T getValue( Enum<?> e, Loader<T> l, WriteCycle cycle ) {
-		validate(e);
-		if ( (loaded & ( 1 << e.ordinal() )) == 0 ) {
-			setValue(e, l.load(cycle) ); // oder doch besser gleich hier cycle.load(Loader) mit Loader.load();
+		validate( e );
+		if ( ( loaded & ( 1 << e.ordinal() ) ) == 0 ) {
+			setValue( e, l.load( cycle ) ); // oder doch besser gleich hier cycle.load(Loader) mit Loader.load();
 		}
-		return (T)data[e.ordinal()];
+		return (T) data[e.ordinal()];
 	}
 
 	private void setValue( Enum<?> e, Object value ) {
@@ -28,12 +28,12 @@ public final class Buffer<E extends Enum<E>> {
 
 	private void validate( Enum<?> e ) {
 		if ( e == null || e.getClass() != idClass )
-			throw new IllegalArgumentException("Not a buffer member id: "+e);
+			throw new IllegalArgumentException( "Not a buffer member id: " + e );
 	}
 
 	public static <E extends Enum<E>> Buffer<E> valueOf( Class<E> idClass ) {
 		if ( idClass == null )
-			throw new IllegalArgumentException("null is not a valid idClass");
+			throw new IllegalArgumentException( "null is not a valid idClass" );
 		return new Buffer<E>( idClass );
 	}
 
@@ -42,6 +42,6 @@ public final class Buffer<E extends Enum<E>> {
 	}
 
 	public int size() {
-		return Long.bitCount(loaded);
+		return Long.bitCount( loaded );
 	}
 }

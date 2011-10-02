@@ -3,11 +3,13 @@ package de.jbee.jtrail.core.unify;
 import de.jbee.jtrail.io.Unique;
 import de.jbee.jtrail.io.WriteCycle;
 
-public class EnumUnifier<E extends Enum<E>> implements Unifier<E> {
+public class EnumUnifier<E extends Enum<E>>
+		implements Unifier<E> {
 
-	private final static class UniqueItem<E extends Enum<E>> implements Unique<E> {
+	private final static class UniqueItem<E extends Enum<E>>
+			implements Unique<E> {
 
-		final E	item;
+		final E item;
 
 		UniqueItem( final E item ) {
 			this.item = item;
@@ -30,10 +32,10 @@ public class EnumUnifier<E extends Enum<E>> implements Unifier<E> {
 
 	}
 
-	@SuppressWarnings( "unchecked" )
-	private static EnumUnifier	UNIFIER	= new EnumUnifier();
+	@SuppressWarnings ( "unchecked" )
+	private static EnumUnifier UNIFIER = new EnumUnifier();
 
-	@SuppressWarnings( "unchecked" )
+	@SuppressWarnings ( "unchecked" )
 	public static <E extends Enum<E>> EnumUnifier<E> getInstance() {
 		return UNIFIER;
 	}

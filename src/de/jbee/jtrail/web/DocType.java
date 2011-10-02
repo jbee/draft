@@ -2,7 +2,8 @@ package de.jbee.jtrail.web;
 
 import de.jbee.jtrail.io.Encodeable;
 
-public enum DocType implements Encodeable {
+public enum DocType
+		implements Encodeable {
 	HTML_TRANSITIONAL,
 	HTML_STRICT,
 	HTML_FRAMESET,

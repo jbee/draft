@@ -18,14 +18,15 @@ public final class ParamBinding<E extends Enum<E>> {
 		return new ParamBinding<E>( enumClass );
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings ( "unchecked" )
 	public <T> Data<T> getData( Param<T> a ) {
-		return (Data<T>)bindings[a.getId().ordinal()];
+		return (Data<T>) bindings[a.getId().ordinal()];
 	}
 
 	public <T> void set( Param<T> param, Data<T> data ) {
-		if ( param.getId().getClass() != enumClass)
-			throw new IllegalArgumentException("The parameter given `"+param+"` is not a member of this ParameterSet: "+toString() );
+		if ( param.getId().getClass() != enumClass )
+			throw new IllegalArgumentException( "The parameter given `" + param
+					+ "` is not a member of this ParameterSet: " + toString() );
 		bindings[param.getId().ordinal()] = data;
 	}
 }

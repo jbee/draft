@@ -3,18 +3,17 @@ package de.jbee.jtrail.io;
 import de.jbee.jtrail.content.Page;
 
 /**
- * Beim beginn des {@link WriteCycle} wird jede {@link Page} nach der Klasse des
- * Aufz�hlungstyps zum Datenzugriff gefragt. Damit kann der Cycle ein
- * {@link Object}[] anlegen, das zum Puffern einmal gelesener Daten dient. Da
- * die Daten nur via enum-Wert geschrieben und gelesen werden k�nnen, ist
- * sichergestellt, dass kein unerwarteteter Zugriff m�glich ist, und die Klasse
- * der Objekte stimmt.
- *
+ * Beim beginn des {@link WriteCycle} wird jede {@link Page} nach der Klasse des Aufz�hlungstyps zum
+ * Datenzugriff gefragt. Damit kann der Cycle ein {@link Object}[] anlegen, das zum Puffern einmal
+ * gelesener Daten dient. Da die Daten nur via enum-Wert geschrieben und gelesen werden k�nnen, ist
+ * sichergestellt, dass kein unerwarteteter Zugriff m�glich ist, und die Klasse der Objekte stimmt.
+ * 
  * @author Jan
- *
+ * 
  * @param <E>
  */
 public interface DataLink<E extends Enum<E>> {
+
 	// das ganze is eher eine util-klasse - allerdings nicht statisch damit der enum-typ immer der selbe ist
 	// im kontext einer seite. - es ginge auch anders proviziert aber nur falschen gebrauch
 

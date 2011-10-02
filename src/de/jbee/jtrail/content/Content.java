@@ -2,7 +2,8 @@ package de.jbee.jtrail.content;
 
 import de.jbee.jtrail.io.Writeable;
 
-public interface Content extends Writeable {
+public interface Content
+		extends Writeable {
 
 	/**
 	 * Kontrollstrukturen generieren selbst keinen output, sind sogesehen transparent was die

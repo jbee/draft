@@ -1,11 +1,11 @@
 package de.jbee.jtrail.io;
 
 /**
- * Some basic {@link Out} implementation realy append some content to the
- * {@link WriteCycle} using its {@link Writer}.
- *
+ * Some basic {@link Out} implementation realy append some content to the {@link WriteCycle} using
+ * its {@link Writer}.
+ * 
  * @author Jan Bernitt
- *
+ * 
  */
 public final class Output {
 
@@ -14,9 +14,10 @@ public final class Output {
 	}
 
 	private final static Out<String> PLAIN_TEXT = new Out<String>() {
+
 		@Override
-		public void write(String value, WriteCycle cycle) {
-			cycle.getWriter().writePlain(value);
+		public void write( String value, WriteCycle cycle ) {
+			cycle.getWriter().writePlain( value );
 		}
 	};
 

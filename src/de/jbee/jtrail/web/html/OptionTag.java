@@ -1,5 +1,6 @@
 package de.jbee.jtrail.web.html;
 
-public interface OptionTag extends BlockTag {
+public interface OptionTag
+		extends BlockTag {
 
 }

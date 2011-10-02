@@ -1,5 +1,6 @@
 package de.jbee.jtrail.web.html;
 
-public interface ATag extends BlockTag {
+public interface ATag
+		extends BlockTag {
 
 }

@@ -1,11 +1,12 @@
 package de.jbee.jtrail.content;
 
-public abstract class ControlFlowContent implements Content {
+public abstract class ControlFlowContent
+		implements Content {
 
-	protected final Content	body;
+	protected final Content body;
 
 	public ControlFlowContent( final Content body ) {
-		assert (body != null);
+		assert ( body != null );
 		this.body = body;
 	}
 

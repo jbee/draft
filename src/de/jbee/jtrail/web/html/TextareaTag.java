@@ -1,5 +1,6 @@
 package de.jbee.jtrail.web.html;
 
-public interface TextareaTag extends BlockTag {
+public interface TextareaTag
+		extends BlockTag {
 
 }

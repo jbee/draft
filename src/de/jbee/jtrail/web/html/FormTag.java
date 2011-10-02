@@ -1,5 +1,6 @@
 package de.jbee.jtrail.web.html;
 
-public interface FormTag extends BlockTag {
+public interface FormTag
+		extends BlockTag {
 
 }

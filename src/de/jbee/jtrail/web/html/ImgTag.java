@@ -1,5 +1,6 @@
 package de.jbee.jtrail.web.html;
 
-public interface ImgTag extends InlineTag {
+public interface ImgTag
+		extends InlineTag {
 
 }

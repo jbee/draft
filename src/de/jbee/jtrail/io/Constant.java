@@ -1,6 +1,7 @@
 package de.jbee.jtrail.io;
 
-public final class Constant<T> implements Source<T> {
+public final class Constant<T>
+		implements Source<T> {
 
 	private final T value;
 
@@ -14,7 +15,7 @@ public final class Constant<T> implements Source<T> {
 	}
 
 	@Override
-	public T read(WriteCycle cycle) {
+	public T read( WriteCycle cycle ) {
 		return value;
 	}
 
